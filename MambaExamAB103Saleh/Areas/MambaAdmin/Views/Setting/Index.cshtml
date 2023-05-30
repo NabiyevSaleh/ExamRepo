@@ -1,0 +1,47 @@
+﻿@using MambaExamAB103Saleh.Models;
+
+@model List<Setting>
+
+@{
+    int count = 0;
+}
+
+<div class="content-wrapper">
+    <div class="row">
+
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+
+                    <h4 class="card-title">Setting Table</h4>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Key</th>
+                                    <th>Value</th>
+                                    <th>Settings</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var team in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@team.Key</td>
+                                        <td>@team.Value</td>
+                                        <td><a asp-controller="setting" asp-action="update" asp-route-id="@team.Id" class="btn btn-warning" /><i class="mdi mdi-pencil">Update</i></td>
+                                        <td><a asp-controller="setting" asp-action="delete" asp-route-id="@team.Id" class="btn btn-danger" /><i class="mdi mdi-delete">Delete</i></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

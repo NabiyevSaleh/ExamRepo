@@ -1,0 +1,43 @@
+﻿@using MambaExamAB103Saleh.Models;
+
+@model Team
+
+<div class="content-wrapper">
+    <div class="row">
+
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Create Table</h4>
+                    <form class="forms-sample" enctype="multipart/form-data" method="post">
+                        <div class="form-group row">
+                            <label asp-for="Name" class="col-sm-3 col-form-label">Name</label>
+                            <div class="col-sm-9">
+                                <input asp-for="Name" class="form-control" placeholder="Name">
+                            </div>
+                            <span asp-validation-for="Name"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Profession" class="col-sm-3 col-form-label">Profession</label>
+                            <div class="col-sm-9">
+                                <input asp-for="Profession" class="form-control" placeholder="Profession">
+                            </div>
+                            <span asp-validation-for="Profession"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Photo" class="col-sm-3 col-form-label">Photo</label>
+                            <div class="col-sm-9">
+                                <input asp-for="Photo" class="form-control" placeholder="Photo">
+                            </div>
+                            <span asp-validation-for="Photo"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary me-2">Create</button>
+                        <button asp-controller="Team" asp-action="Index" class="btn btn-light">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

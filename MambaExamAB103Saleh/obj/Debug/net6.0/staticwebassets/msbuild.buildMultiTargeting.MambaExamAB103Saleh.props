@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MambaExamAB103Saleh.props" />
+</Project>
